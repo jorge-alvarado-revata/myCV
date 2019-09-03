@@ -10,12 +10,12 @@ Master's student in mathematical statistics at the National University of San Ma
 Teacher assistant on UTEC university- Introduction to programming with Python and C++.
 
 GitHub: 
-https://github.com/jrevatta
-https://github.com/jorge-alvarado-revata
+- https://github.com/jrevatta
+- https://github.com/jorge-alvarado-revata
 
 Blogs:
-https://newscomputing.wordpress.com/
-http://notesoninnovation.wordpress.com/
+- https://newscomputing.wordpress.com/
+- http://notesoninnovation.wordpress.com/
 
 Education:
 
