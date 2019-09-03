@@ -18,6 +18,16 @@ https://newscomputing.wordpress.com/
 http://notesoninnovation.wordpress.com/
 
 Education:
+
+ENERO 2019
+- ELEMENTS OF AI, UNIVERSITY OF HELSINKI AND REAKTOR
+
+MARZO 2017
+- INTRODUCTION TO BIGDATA AND DATA SCIENCE, PROFESSOR’S WIDOM COURSE
+
+MARZO 2018
+- NEURAL NETWORKS AND DEEP LEARNING, DEEPLEARNING.AI
+
 - Diploma in Pymes Esan 2012
 - Master in R + D + i (Innovation research) at the International University of Andalusia - Spain 2010
 - Bachelor in Systems Engineering (Computer Science) National University of San Marcos - Peru 2004
@@ -75,8 +85,4 @@ Publications:
 - Published in: 2015 Latin American Computing Conference (CLEI)
 - Date of Conference: 19-23 Oct. 2015
 - Date Added to IEEE Xplore: 17 December 2015
-- ISBN Information:
-- INSPEC Accession Number: 15665873
-DOI: 10.1109/CLEI.2015.7359984
-Publisher: IEEE
-Conference Location: Arequipa, Peru
+- Conference Location: Arequipa, Peru
