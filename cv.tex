@@ -1,0 +1,313 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=1]{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ right=20mm,
+ top=30mm,
+ }
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Jorge Luis Alvarado} \\[7.5pt]
+\href{https://github.com/jorge-alvarado-revata}{\raisebox{-0.05\height}\faGithub\ jorge-alvarado-revata} \ $|$ \ 
+\href{mailto:j.revatta@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ j.revatta@gmail.com} \ $|$ \
+\href{tel:+51926137221}{\raisebox{-0.05\height}\faMobile \ +51-926-137-221} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Resumen}
+Ingeniero de Sistemas (UNMSM) con experiencia en roles Developer, Senior Developer, Líder técnico en tecnología Web, APIs y aplicaciones transaccionales en banca privada y sector público. Experto en .NET, implementación de consumo de servicios REST, SOAP, autenticación OAUTH e integración de seguridad cloud. Experiencia en Angular hasta versiones actuales. Experiencia en Java Spring Boot y Flutter. Docente en Python y Angular.
+
+\section{Objetivos}
+Desarrollar componentes y APIs de gran calidad, con código legible, ordenado y siguiendo mejores prácticas de programación, patrones y principios SOLID. Lograr la satisfacción del cliente atendiendo pro-activamente las necesidades del proyecto.
+%Experience
+\section{Experiencia}
+
+\textsl{FRONTEND DEVELOPER}\\[3.75pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textsl{INETUM, PERÚ – Contraloría General del Perú} & \hfill Octubre 2023 - Febrero 2024 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Implemente mejoras en aplicativo generador de formularios encargado de nuevos componentes de datasource.
+        \item[--] Implemente de microservicios en Java 17 para mejoras de datos y consultas de servicios SOAP de seguridad.
+        \item[--] Implemente microservicios para gestión de configuración de plantillas y tablas de procesos con ORACLE Database.
+        \item[--] Implementé esquema de validación de parametros de entrada a los APIs.
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\textsl{SENIOR DEVELOPER}\\[3.75pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textsl{MINEDU, PERÚ – CONCURSO DOCENTE 2023} & \hfill Mayo 2023 - Junio 2023 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Implemente exitosamente nuevos microservicios C\# con esquemas de validación.
+        \item[--] Optimización de aplicativo Flutter.
+        \item[--] Microservicios para gestión de configuración de plantillas y tablas de procesos.
+        \item[--] Optimización de consumo de servicios RabbitMQ.
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\textsl{SENIOR DEVELOPER}\\[3.75pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textsl{MINEDU, PERÚ – PROYECTO SAISA} & \hfill Julio 2022 - Marzo 2023 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Implemente de componentes reutilizables en ReactiveForm, integración con servicios BackEnd con Microservicios C\# y base de datos SQL Server.
+        \item[--] Implemente componentes BackEnd MinIO S3 para carga y descarga de documentos pdf.
+        \item[--] Implemente componentes de reportes PDF.
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\newpage
+
+\textsl{SENIOR DEVELOPER}\\[3.75pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textsl{INTELEGO SCRL, PERÚ – GESTOR DE COMPRAS CLOUD} & \hfill Febrero 2021 - Mayo 2022 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Implemente un sistema de gestión de compras para restaurantes y servicios de catering en Angular 9, Python Django y Flutter 2, implementación de uso de sistemas de autenticación cloud con Firebase.
+        \item[--] Implemente carga de imágenes en servicios cloud.
+        \item[--] Implemente componentes de tablas y formularios de carga y visualización.
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\textsl{DOCENTE}\\[3.75pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textsl{UTEC, PERÚ – DOCENTE CURSOS PRESENCIAL} & \hfill Febrero 2017 - Enero 2020 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Profesor de programación en Python y C++.
+        \item[--] Profesor de curso de Servicios empresariales.
+
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\textsl{CONSULTOR}\\[3.75pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textsl{OP ENERGETICA SAC, PERÚ – CONSULTORIA SISTEMAS} & \hfill Junio 2014 - MAyo 2016 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Diseño y desarrollo de sistema de carga laboral obreros en Jquery, Bootstrap, C\#.
+        \item[--] Diseño y desarrollo de gestor de planificación de emergencias en Javascript, Bootstrap, Python.
+
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+
+\textsl{LÍDER DE EQUIPO}\\[3.75pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textsl{NTT DATA, PERÚ – Jefatura y Líder técnico} & \hfill Abril 2012 - Julio 2013 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Estimación, seguimiento de proyectos, participación en sesiones de diseño técnico y supervisión y apoyo a equipo de 10 analistas programadores.
+
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\textsl{ANALISTA DESARROLLADOR}\\[3.75pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textsl{BCP, PERÚ – ANÁLISIS Y DISEÑO} & \hfill Enero 2003 - Marzo 2012 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Liderazgo técnico de equipo de 5 programadores para proyectos Banca Móvil y Gestor de inversiones .
+        \item[--] Análisis y Diseño de aplicaciones en equipo HomeBanking.
+        \item[--] Mantenimiento y pase a producción de aplicaciones Web para clientes de la banca personal.
+
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{EDUCACIÓN}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2023 - present & Maestría Estadística Matemática \hfill \textsl{UNMSM} \\
+
+2009 - 2010 & Máster en I+D+i \hfill \textsl{UNIA} \\ 
+
+1997 - 2003 & Ingeniería de Sistemas \hfill \textsl{UNMSM} \\
+
+1997 - 2003 & Ingles Intermedio B2 \hfill \textsl{Peruano Británico} \\
+\end{tabularx}
+%Projects
+
+
+\section{CERTIFICADOS}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+ENERO 2023 & Building AI \hfill \textsl{MinnaLearn \& University of Helsinki} \\
+
+OCT 2021 & AWS Machine Learning Foundation \hfill \textsl{Udacity} \\ 
+
+SEP 2020 & Modern JavaScript ES6  \hfill \textsl{Coursera} \\
+
+AGO 2020 & Google Cloud Fundamentals: Core Infrastructure  \hfill \textsl{Coursera} \\
+
+ENERO 2019 & Elements of AI  \hfill \textsl{University of Helsinki \& Reacktor} \\
+
+MAYO 2004 & Microsoft Certified Solution Developer  \hfill \textsl{Microsoft} \\
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{HABILIDADES}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Front &  \normalsize{TypeScript, Angular 17, Jasmine, NgRX}\\
+Mobile & \normalsize{Flutter, LocalStorage, SQLite } \\
+UI  &  \normalsize{Material Design, Bootstrap, TailWind, CSS}\\  
+Framework  &  \normalsize{Django, ASP.NET, .NET Core, Spring Boot, DRF, FastAPI, Swagger}\\
+Language  &  \normalsize{Python, C\#, Java, C++, T-SQL, PL/SQL }\\
+Cloud  &  \normalsize{Google Cloud, AWS, Firebase Auth, Firebase storage}\\
+BD  &  \normalsize{SQL Server, Oracle Database, PostgreSQL }\\
+\end{tabularx}
+
+
+
+\vfill
+\center{\footnotesize Última versión: \today}
+
+\end{document}
